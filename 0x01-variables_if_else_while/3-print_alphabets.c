@@ -20,6 +20,6 @@ int main(void)
         alpho++;
     } while (alpho <= 'Z');
 
-    printf("\n");
+    putchar('\n');
     return (0);
 }
