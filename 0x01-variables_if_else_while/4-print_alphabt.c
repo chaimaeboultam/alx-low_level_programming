@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'get the last digit of a number'
+ * Description: 'Print all the letters except q and e'
  * Return: always 0
  */
 
