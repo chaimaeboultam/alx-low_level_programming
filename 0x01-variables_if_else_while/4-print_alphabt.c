@@ -19,10 +19,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-In this rewritten code, I've applied the Betty style guidelines by adjusting the comments, indentation, and formatting to meet the standard.
-
-
-
-
-
-
