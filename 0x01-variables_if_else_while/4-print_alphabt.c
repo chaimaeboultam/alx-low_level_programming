@@ -1,19 +1,28 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
- * Description: 'Print all the letters except q and e'
- * Return: always 0
+ *
+ * Description: Prints all the letters except q and e
+ *
+ * Return: Always 0
  */
-
 int main(void)
 {
-     char letter= 'a';
+	char letter = 'a';
 
-    for (letter = 'a'; letter <= 'z'; letter++) {
-        if (letter != 'q' && letter != 'e') {
-            putchar(letter);
-        }
-    }
-    putchar('\n');
-    return 0;
+	for (letter = 'a'; letter <= 'z'; letter++) {
+		if (letter != 'q' && letter != 'e') {
+			putchar(letter);
+		}
+	}
+	putchar('\n');
+	return (0);
 }
+In this rewritten code, I've applied the Betty style guidelines by adjusting the comments, indentation, and formatting to meet the standard.
+
+
+
+
+
+
