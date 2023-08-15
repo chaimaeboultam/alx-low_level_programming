@@ -2,18 +2,21 @@
 
 /**
  * main - Entry point
- * Description: 'Printing the alphabet in lowercase'
+ *
+ * Description: Prints the alphabet in lowercase
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-  char alpha = 'a';
+	char alpha = 'a';
 
-  do {
-    putchar(alpha);
-    alpha++;
-  } while (alpha <= 'z');
-  putchar('\n');
- return (0);
+	do {
+		putchar(alpha);
+		alpha++;
+	} while (alpha <= 'z');
+
+	putchar('\n');
+	return (0);
 }
 
