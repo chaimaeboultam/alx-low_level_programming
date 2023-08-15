@@ -3,20 +3,21 @@
 
 /**
  * main - Entry point
- * Description: 'all possible combinations of single-digit numbers'
+ * Description: Prints all possible combinations of single-digit numbers
  * Return: Always 0 (Success)
  */
 int main(void)
-
 {
-    int i;
+	int i;
 
-    for (i = 0; i < 9; i++) {
-        putchar(i + '0');
-        putchar(',');
-	putchar(' ');
-    }
-    putchar('9');
-    printf("\n");
-    return 0;
+	for (i = 0; i < 9; i++)
+	{
+		putchar(i + '0');
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('9');
+	putchar('\n');
+
+	return (0);
 }
