@@ -17,7 +17,7 @@ int main(void)
 		putchar(' ');
 	}
 	putchar('9');
-	putchar('\n');
+	printf("\n");
 
 	return (0);
 }
