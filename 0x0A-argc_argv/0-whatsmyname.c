@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-
 /**
- * main-this function is used to print the name of the program.
- * @argc:the number of arguments
- * @argv:array of strings
+ * main - prints the name of the program
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * return:0 always succes
+ * Return: Always 0 (Success)
  */
-int main(int argc __attribute__((unused)),char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	printf("%s\n", *argv);
 
-	return 0;
+	return (0);
 }
