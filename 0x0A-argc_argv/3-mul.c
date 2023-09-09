@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 
 /**
@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int mul, num1, num2;
-	if(argc<3 || argc>3)
+	if(argc != 3)
 	{
 		printf("ERROR\n");
 		return 1;
