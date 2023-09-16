@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h> 
 #include "dog.h"
 
@@ -75,7 +74,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
     new_dog->age = age;
 
-    printf("My name is: %s, and I am: %.1f\n", new_dog->name, new_dog->age);
 
-    return new_dog;
+    return (new_dog);
 }
