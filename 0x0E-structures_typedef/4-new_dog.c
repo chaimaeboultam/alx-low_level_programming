@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>  // Added for malloc
+#include <stdlib.h> 
 #include "dog.h"
 
 /**
