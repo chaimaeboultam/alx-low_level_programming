@@ -1,59 +1,73 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * _atoi - Convert a string to an integer
- * @s: String to be converted
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
  *
- * Return: The converted integer
+ * Return: the int converted from the string
  */
 int _atoi(char *s)
 {
-    int result = 0;
-    int sign = 1;
+	int i, d, n, len, f, digit;
 
-    /* Ignore leading white space characters */
-    while (*s == ' ')
-        s++;
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
 
-    if (*s == '-' || *s == '+')
-    {
-        sign = (*s == '-') ? -1 : 1;
-        s++;
-    }
+	while (s[len] != '\0')
+		len++;
 
-    while (*s >= '0' && *s <= '9')
-    {
-        result = result * 10 + (*s - '0');
-        s++;
-    }
+	while (i < len && f == 0)
+	{
+		if (s[i] == '-')
+			++d;
 
-    return sign * result;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
+	}
+
+	if (f == 0)
+		return (0);
+
+	return (n);
 }
 
-
 /**
- * main - Multiplies two numbers
- * @argc: Number of arguments
- * @argv: Array of arguments
+ * main - multiplies two numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 on success, 1 on error
+ * Return: 0 (Success), 1 (Error)
  */
 int main(int argc, char *argv[])
 {
-    int mul, num1, num2;
+	int result, num1, num2;
 
-    if (argc != 3)
-    {
-        printf("ERROR\n");
-        return 1;
-    }
-    else
-    {
-        num1 = _atoi(argv[1]);
-        num2 = _atoi(argv[2]);
-        mul = num1 * num2;
-        printf("%d\n", mul);
-    }
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-    return 0;
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", result);
+
+	return (0);
 }
